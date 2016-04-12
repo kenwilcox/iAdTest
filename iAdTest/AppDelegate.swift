@@ -7,14 +7,23 @@
 //
 
 import UIKit
+import iAd
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
-
+    var bannerView: ADBannerView!
+    var viewsDictionary = [String:AnyObject]()
+    
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+        bannerView = ADBannerView(adType: .Banner)
+        bannerView.translatesAutoresizingMaskIntoConstraints = false
+        bannerView.delegate = self
+        bannerView.hidden = true
+        
+        viewsDictionary = ["bannerView": bannerView]
+        
         // Override point for customization after application launch.
         return true
     }
@@ -44,3 +53,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 }
 
+extension AppDelegate: ADBannerViewDelegate {
+    // if you're using a table view, a scroll view, a collection view, a text view or something else that scrolls,
+    // you should set its contentInset and scrollIndicatorInset properties so that it doesn't scroll under
+    // the bannerView when it's visible
+    
+    func bannerViewDidLoadAd(banner: ADBannerView!) {
+        bannerView.hidden = false
+    }
+    
+    func bannerView(banner: ADBannerView!, didFailToReceiveAdWithError error: NSError!) {
+        bannerView.hidden = true
+    }
+}
