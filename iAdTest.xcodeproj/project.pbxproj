@@ -47,6 +47,8 @@
 		BECBDB161CBD328000D3766E /* iAdTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iAdTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BECBDB1A1CBD328000D3766E /* iAdTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iAdTestUITests.swift; sourceTree = "<group>"; };
 		BECBDB1C1CBD328000D3766E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BECBDB281CBD38E500D3766E /* LICENSE.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
+		BECBDB291CBD38E500D3766E /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,8 @@
 		BECBDAEE1CBD328000D3766E = {
 			isa = PBXGroup;
 			children = (
+				BECBDB281CBD38E500D3766E /* LICENSE.md */,
+				BECBDB291CBD38E500D3766E /* README.md */,
 				BECBDAF91CBD328000D3766E /* iAdTest */,
 				BECBDB0E1CBD328000D3766E /* iAdTestTests */,
 				BECBDB191CBD328000D3766E /* iAdTestUITests */,
